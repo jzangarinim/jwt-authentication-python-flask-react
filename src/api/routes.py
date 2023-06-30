@@ -14,6 +14,10 @@ def set_password(password, salt):
 def check_password(hashed_password, password, salt):
     return check_password_hash(hashed_password, f"{password}{salt}")
 
+@api.route('/login', methods=['POST'])
+def user_login():
+    return jsonify([])
+
 @api.route('/hello', methods=['POST', 'GET'])
 def handle_hello():
 

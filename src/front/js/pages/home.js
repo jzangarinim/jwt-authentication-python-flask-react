@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
-import rigoImageUrl from "../../img/rigo-baby.jpg";
+import { Link } from "react-router-dom";
 import "../../styles/home.css";
 
 export const Home = () => {
@@ -8,7 +8,22 @@ export const Home = () => {
 
   return (
     <>
-      <h1>ola k tal</h1>
+      <div className="container-fluid">
+        <div className="row d-flex justify-content-center">
+          <div className="d-flex justify-content-center mt-4">
+            <Link to="/login">
+              <button type="button" className="btn btn-primary me-3">
+                Login
+              </button>
+            </Link>
+            <Link to="/signup">
+              <button type="button" className="btn btn-primary">
+                Register
+              </button>
+            </Link>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
